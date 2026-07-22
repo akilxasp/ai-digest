@@ -18,6 +18,11 @@
     --pad: clamp(16px, 4vw, 48px);
   }
   * { box-sizing: border-box; }
+  /* grid/flex children default to min-width:auto and refuse to shrink below
+     their longest unbreakable word — that is what pushes columns into each
+     other on desktop. Reset it once, globally. */
+  .hero > *, .summary > *, .item > *, footer > * { min-width: 0; }
+  h1, h3, p, .meta div { overflow-wrap: anywhere; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
@@ -30,6 +35,8 @@
   }
   a { color: inherit; }
   img { max-width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+  /* keeps the column from collapsing while {{HERO_IMAGE}} is unresolved */
+  .summary img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #efefef; }
 
   .label {
     font-size: 10px;
@@ -46,7 +53,9 @@
     padding: var(--pad);
     min-height: 62vh;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-content: start;
     gap: var(--pad);
     background-image: radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
     background-size: 6px 6px;
@@ -76,7 +85,7 @@
   }
   .hero .kicker { color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.22em; font-size: 10px; }
   .hero .lede { max-width: 34ch; color: var(--ink-fg); }
-  .hero .meta { color: var(--ink-dim); margin-top: 2rem; }
+  .hero .meta { color: var(--ink-dim); margin-top: 2rem; align-self: end; }
   .hero .meta div { margin-bottom: .5rem; }
 
   /* ---------- SECTIONS ---------- */
