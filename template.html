@@ -11,7 +11,8 @@
     - literal hex colors only, never CSS variables (Gmail strips them)
     - tables for layout, never flex or grid (Gmail ignores both)
     - styles inline on the element (Gmail drops much of <style>)
-    - no anchor-link nav, no position, no background-image
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
   The <style> block below is progressive enhancement for browsers only.
   Nothing in it may be load-bearing.
 -->
@@ -31,11 +32,15 @@
 <table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
 
   <!-- ============ HERO ============ -->
-  <tr><td class="pad" style="background:#050505;padding:40px;color:#e8e8e8;">
+  <tr><td style="background:#050505;padding:0;">
+    <img src="{{HERO_IMAGE}}" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">{{HERO_IMAGE_CREDIT}}</div>
     <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
-    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:28px;">// {{EDITION_LABEL}} — {{DATE}}</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// {{EDITION_LABEL}} — {{DATE}}</div>
     <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">{{DIGEST_TITLE}}</div>
-    <div style="color:#e8e8e8;max-width:46ch;">{{DIGEST_LEDE}}</div>
+    <div style="color:#e8e8e8;">{{DIGEST_LEDE}}</div>
     <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
       Issue {{ISSUE_NO}} &nbsp;·&nbsp; {{SOURCE_COUNT}} sources &nbsp;·&nbsp; {{READ_TIME}}
     </div>
@@ -43,18 +48,18 @@
 
   <!-- ============ SUMMARY ============ -->
   <tr><td class="pad" style="padding:40px;">
-    <img src="{{HERO_IMAGE}}" alt="" width="620" style="width:100%;max-width:620px;display:block;border:0;padding-bottom:26px;">
     <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#6a6a6a;padding-bottom:12px;">Summary</div>
     <div>{{EXECUTIVE_SUMMARY}}</div>
   </td></tr>
 
   <!-- ============ SIGNALS ============ -->
-  <tr><td class="pad" style="padding:0 40px;">
-    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#6a6a6a;border-top:1px solid #d4d4d4;padding-top:26px;">Signals</div>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
   </td></tr>
 
   <!-- ITEM_TEMPLATE_START — duplicate this whole <tr> once per article -->
   <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:{{ITEM_COLOR}};font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
     <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">{{ITEM_TITLE}}</div>
     <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">{{ITEM_SOURCE}} &nbsp;·&nbsp; {{ITEM_TAG}}</div>
     <div style="padding-top:10px;">{{ITEM_SUMMARY}}</div>
@@ -63,11 +68,21 @@
   <!-- ITEM_TEMPLATE_END -->
 
   <!-- ============ DEEP DIVE ============ -->
-  <tr><td class="pad" style="background:#050505;padding:40px;color:#e8e8e8;">
+  <tr><td style="background:#050505;padding:0;">
+    <img src="{{FEATURE_IMAGE}}" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">{{FEATURE_IMAGE_CREDIT}}</div>
     <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
     <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">{{FEATURE_TITLE}}</div>
     <div style="color:#e8e8e8;">{{FEATURE_BODY}}</div>
     <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">{{FEATURE_STAMP}}</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">{{DAILY_TIP}}</div>
   </td></tr>
 
   <!-- ============ ARCHIVE ============ -->
