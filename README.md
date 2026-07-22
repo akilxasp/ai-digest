@@ -31,16 +31,18 @@ never reaches the inbox.
 ## Auto-send
 
 `.github/workflows/email-digest.yml` fires on every push touching
-`digests/**.html`, takes the newest file, and mails it as an HTML email via
-Gmail SMTP. `workflow_dispatch` re-sends manually (optional `file` input).
+`digests/**.html`, takes the newest file, and sends it as an HTML email through
+the Resend API. `workflow_dispatch` re-sends manually (optional `file` input).
 
 One-time setup:
 
-1. Google Account → Security → 2-Step Verification → App passwords. Generate one
-   for "Mail". This is not your Google password and is revocable on its own.
-2. Repo → Settings → Secrets and variables → Actions, add:
-   `GMAIL_USER` (sending address), `GMAIL_APP_PASSWORD` (step 1),
-   `MAIL_TO` (recipient).
+1. Sign up at resend.com and create an API key (send access is enough).
+2. Repo → Settings → Secrets and variables → Actions:
+   - Secrets: `RESEND_API_KEY`, `MAIL_TO` (recipient)
+   - Variables (optional): `MAIL_FROM` — defaults to
+     `AI Digest <onboarding@resend.dev>`, which can only deliver to the address
+     the Resend account was registered with. Verify a domain in Resend to send
+     from your own address or to anyone else.
 3. Repo → Settings → Pages → deploy from `main`, root. Gives each digest a
    stable URL that the email links to.
 
