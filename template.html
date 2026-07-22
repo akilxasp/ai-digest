@@ -46,12 +46,6 @@
     </div>
   </td></tr>
 
-  <!-- ============ SUMMARY ============ -->
-  <tr><td class="pad" style="padding:40px;">
-    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#6a6a6a;padding-bottom:12px;">Summary</div>
-    <div>{{EXECUTIVE_SUMMARY}}</div>
-  </td></tr>
-
   <!-- ============ SIGNALS ============ -->
   <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
     <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
@@ -84,6 +78,21 @@
     <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
     <div style="color:#0a0a0a;">{{DAILY_TIP}}</div>
   </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+
+  <!-- COMMUNITY_TEMPLATE_START — duplicate this whole <tr> once per community item -->
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="font-size:15px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">{{COMMUNITY_TITLE}}</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">{{COMMUNITY_SOURCE}} &nbsp;·&nbsp; {{COMMUNITY_SIGNAL}}</div>
+    <div style="padding-top:10px;">{{COMMUNITY_SUMMARY}}</div>
+    <a class="more" href="{{COMMUNITY_URL}}" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+  </td></tr>
+  <!-- COMMUNITY_TEMPLATE_END -->
 
   <!-- ============ ARCHIVE ============ -->
   <tr><td class="pad" align="center" style="padding:40px;">
