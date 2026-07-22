@@ -25,3 +25,24 @@ Repeat the block between `<!-- ITEM_TEMPLATE_START -->` and `ITEM_TEMPLATE_END`
 once per story. The grid auto-fits; 3–5 items per row-width looks right.
 
 Any unreplaced `{{...}}` renders literally — grep for `{{` before publishing.
+The email workflow hard-fails on leftover placeholders, so a half-filled digest
+never reaches the inbox.
+
+## Auto-send
+
+`.github/workflows/email-digest.yml` fires on every push touching
+`digests/**.html`, takes the newest file, and mails it as an HTML email via
+Gmail SMTP. `workflow_dispatch` re-sends manually (optional `file` input).
+
+One-time setup:
+
+1. Google Account → Security → 2-Step Verification → App passwords. Generate one
+   for "Mail". This is not your Google password and is revocable on its own.
+2. Repo → Settings → Secrets and variables → Actions, add:
+   `GMAIL_USER` (sending address), `GMAIL_APP_PASSWORD` (step 1),
+   `MAIL_TO` (recipient).
+3. Repo → Settings → Pages → deploy from `main`, root. Gives each digest a
+   stable URL that the email links to.
+
+The routine only commits and pushes; CI owns the sending.
+

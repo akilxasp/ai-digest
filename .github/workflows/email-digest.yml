@@ -1,0 +1,66 @@
+name: Email digest
+
+on:
+  push:
+    paths: ["digests/**.html"]
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Path of digest to send (defaults to newest)"
+        required: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Pick digest
+        id: pick
+        run: |
+          FILE="${{ inputs.file }}"
+          if [ -z "$FILE" ]; then
+            FILE=$(ls -1 digests/*.html | sort | tail -1)
+          fi
+          test -f "$FILE" || { echo "no digest found"; exit 1; }
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      # ponytail: stdlib smtplib instead of a marketplace mail action —
+      # fewer moving parts and no third-party code holding the app password.
+      - name: Send
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          DIGEST: ${{ steps.pick.outputs.file }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, re, smtplib, pathlib
+          from email.message import EmailMessage
+
+          path = pathlib.Path(os.environ["DIGEST"])
+          html = path.read_text(encoding="utf-8")
+
+          leftover = set(re.findall(r"\{\{[A-Z_]+\}\}", html))
+          if leftover:
+              raise SystemExit(f"unreplaced placeholders in {path}: {sorted(leftover)}")
+
+          title = re.search(r"<title>(.*?)</title>", html, re.S)
+          user, repo = os.environ["REPO"].split("/")
+          url = f"https://{user}.github.io/{repo}/{path.as_posix()}"
+
+          msg = EmailMessage()
+          msg["Subject"] = (title.group(1).strip() if title else f"AI Digest — {path.stem}")
+          msg["From"] = os.environ["GMAIL_USER"]
+          msg["To"] = os.environ["MAIL_TO"]
+          msg.set_content(f"Web version: {url}")
+          msg.add_alternative(html, subtype="html")
+
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+              s.login(os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"])
+              s.send_message(msg)
+          print("sent", path, "->", os.environ["MAIL_TO"])
+          PY
