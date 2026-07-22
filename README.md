@@ -3,6 +3,19 @@
 Single-file HTML template for the recurring AI digest. Monospace / high-contrast
 technical-brief style: black hero, hairline rules, uppercase small-caps labels.
 
+## Editing rules
+
+The same file is the web page *and* the email body, so it is written to survive
+Gmail, which throws away most of what a browser accepts. When editing:
+
+- **Literal hex colors only.** Gmail strips CSS custom properties, so `var(--bg)`
+  silently degrades every color to the default black-on-white.
+- **Tables for layout.** `display:flex` and `display:grid` are ignored; the
+  layout collapses to a single stacked column.
+- **Styles inline on the element.** Rules in `<style>` are unreliable — that
+  block is browser-only polish and must never be load-bearing.
+- **No anchor-link nav**, no `position`, no `background-image`.
+
 ## Usage
 
 The routine copies `template.html` to `digests/YYYY-MM-DD.html` and replaces the
