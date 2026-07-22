@@ -22,8 +22,10 @@
   @media (max-width: 620px) {
     .pad { padding: 24px !important; }
     .h1 { font-size: 34px !important; }
-    /* browsers stack the community pair; email clients keep two columns */
-    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
   }
 </style>
 </head>
@@ -97,16 +99,16 @@
        Odd number of items? Keep the second <td> for spacing, but DELETE everything
        inside it — all four divs and the anchor — leaving just &nbsp;. Blanking only
        the placeholders strands a stray "View thread" link in an empty cell. -->
-  <tr><td class="pad" style="padding:0 40px;">
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 18px 26px 0;border-bottom:1px solid #d4d4d4;">
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
           <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">{{COMMUNITY_TITLE_A}}</div>
           <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">{{COMMUNITY_SOURCE_A}}<br>{{COMMUNITY_SIGNAL_A}}</div>
           <div style="padding-top:10px;">{{COMMUNITY_SUMMARY_A}}</div>
           <a class="more" href="{{COMMUNITY_URL_A}}" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
         </td>
-        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 18px;border-bottom:1px solid #d4d4d4;">
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
           <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">{{COMMUNITY_TITLE_B}}</div>
           <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">{{COMMUNITY_SOURCE_B}}<br>{{COMMUNITY_SIGNAL_B}}</div>
           <div style="padding-top:10px;">{{COMMUNITY_SUMMARY_B}}</div>
@@ -126,22 +128,22 @@
   <!-- TOOL_ROW_START — one row holds THREE tools; duplicate per group of three.
        Fewer than three in the last row? Keep the leftover <td>s for spacing, but
        DELETE everything inside them — every div and the anchor — leaving just &nbsp;. -->
-  <tr><td class="pad" style="padding:0 40px;">
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 14px 26px 0;border-bottom:1px solid #d4d4d4;">
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
           <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">{{TOOL_NAME_A}}</div>
           <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">{{TOOL_KIND_A}}</div>
           <div style="padding-top:10px;">{{TOOL_SUMMARY_A}}</div>
           <a class="more" href="{{TOOL_URL_A}}" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
         </td>
-        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 7px;border-bottom:1px solid #d4d4d4;">
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
           <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">{{TOOL_NAME_B}}</div>
           <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">{{TOOL_KIND_B}}</div>
           <div style="padding-top:10px;">{{TOOL_SUMMARY_B}}</div>
           <a class="more" href="{{TOOL_URL_B}}" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
         </td>
-        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 14px;border-bottom:1px solid #d4d4d4;">
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
           <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">{{TOOL_NAME_C}}</div>
           <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">{{TOOL_KIND_C}}</div>
           <div style="padding-top:10px;">{{TOOL_SUMMARY_C}}</div>
