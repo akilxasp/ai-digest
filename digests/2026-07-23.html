@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>GOVERNED BY DESIGN — AI Digest</title>
+<!--
+  EMAIL-SAFE BY CONSTRUCTION. This file is both the web page and the email body,
+  so it obeys email client rules:
+    - literal hex colors only, never CSS variables (Gmail strips them)
+    - tables for layout, never flex or grid (Gmail ignores both)
+    - styles inline on the element (Gmail drops much of <style>)
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
+  The <style> block below is progressive enhancement for browsers only.
+  Nothing in it may be load-bearing.
+-->
+<style>
+  body { margin: 0; }
+  a.more:hover { opacity: .6; }
+  @media (max-width: 620px) {
+    .pad { padding: 24px !important; }
+    .h1 { font-size: 34px !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#e8e8e8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#e8e8e8;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
+
+  <!-- ============ HERO ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-23-hero.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Vera Delineatio Celeberrimae Civitatis Rigensis — panorama of Riga, Heinrich Thum, 1612. Public domain, Wikimedia Commons.</div>
+    <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// DAILY AI DIGEST — 23 JULY 2026</div>
+    <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">GOVERNED BY DESIGN</div>
+    <div style="color:#e8e8e8;">Google and Microsoft spent the day hardening the AI infrastructure layer — cheaper agentic models, sovereign deployments for regulated industries — while Anthropic taught Claude to learn skills by watching a screen recording. Meanwhile Coca-Cola and X both shipped major redesigns built to hold a single system together at scale, one via an AI style engine, the other via a from-scratch app rebuild.</div>
+    <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
+      Issue 2 &nbsp;·&nbsp; 7 sources &nbsp;·&nbsp; 5 MIN
+    </div>
+  </td></tr>
+
+  <!-- ============ SIGNALS ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#3f88c5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Google launches Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Google &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Google shipped a refreshed Gemini Flash lineup, including a security-tuned “Cyber” variant for vulnerability discovery, with cheaper pricing and higher coding and agent benchmark scores than the prior generation.</div>
+    <a class="more" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#e94f37;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Microsoft and Mistral expand their strategic partnership</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Microsoft &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Microsoft committed multibillion-dollar funding to Mistral's European GPU buildout and brought Mistral's frontier models into Azure, Foundry, and Copilot Studio for regulated industries that need sovereign, disconnected-capable AI.</div>
+    <a class="more" href="https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#44bba4;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Anthropic adds “Record a Skill” to Claude Cowork</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Dataconomy &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Claude can now watch a screen recording of a user narrating a task and automatically turn that demonstration into a reusable, rerunnable Skill, no prompt engineering required.</div>
+    <a class="more" href="https://dataconomy.com/2026/07/22/anthropic-teach-claude-screen-recording-feature/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#f4c046;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">OpenAI launches a ChatGPT for Small Business program</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">OpenAI &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">OpenAI introduced a dedicated small-business track built on ChatGPT Work, with training, partner integrations, and templated agent workflows aimed at giving smaller companies the productivity tools enterprises already have.</div>
+    <a class="more" href="https://openai.com/index/introducing-chatgpt-small-business-program/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#d81e5b;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Coca-Cola unveils a unified global visual identity system</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">The Coca-Cola Company &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Coca-Cola rolled out one brand system across 200-plus markets, built on Adobe's Project Fizzion, which encodes creative intent into a machine-readable StyleID so teams can generate on-brand variations automatically.</div>
+    <a class="more" href="https://www.coca-colacompany.com/media-center/coca-cola-sharpens-its-identity-under-one-bold-visual-system" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#5762d5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">X relaunches a fully rebuilt Android app</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">TechCrunch &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">X shipped a from-scratch rebuild of its Android app after nearly a year of engineering work, aimed at making the app materially faster and more reliable than the previous version.</div>
+    <a class="more" href="https://techcrunch.com/2026/07/20/x-relaunches-a-rebuilt-android-app-after-year-long-effort/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+
+  <!-- ============ DEEP DIVE ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-23-feature.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Lithograph illustration of Lahore Fort, published by Syad Muhammad Latif, 1892. Public domain, Wikimedia Commons.</div>
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
+    <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">The industry is building for scale, not for demos</div>
+    <div style="color:#e8e8e8;">Every story today is about making AI reliable enough to run unattended at scale: Gemini's new Flash tier trades novelty for lower cost and better agent benchmarks, Microsoft and Mistral are selling “AI you can control” to industries that can't risk a black box, and Anthropic's screen-recording Skills turn one-off human know-how into something Claude can repeat exactly. Coca-Cola's AI style engine and X's app rebuild are the same instinct applied to design: a system that keeps thousands of executions consistent instead of one designer redoing the same call by hand.</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">23 JULY 2026</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">If you're teaching an AI agent a repetitive task, don't just describe it — demonstrate it once, narrated, the way Anthropic's new Claude Cowork feature expects. A recorded walkthrough captures the edge cases and exact click-order that a written prompt usually leaves out, and it turns into a Skill you can rerun instead of re-explaining.</div>
+  </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td style="padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-23-community.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="padding:14px 40px 0 40px;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;">Harvard College Observatory, 1899. Public domain, Wikimedia Commons.</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Transcribe.cpp — a fast, portable local speech-to-text library</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>764 points · 166 comments</div>
+          <div style="padding-top:10px;">ggml-based transcription library with GPU acceleration across many ASR models; praised as a strong whisper.cpp-style successor for fully local, no-cloud speech pipelines.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=48963879" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Nativ — run frontier open models locally on Apple Silicon</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>374 points · 129 comments</div>
+          <div style="padding-top:10px;">Open-source Mac app for chatting with local open-weight models, no accounts or subscriptions. Praised as a cleaner Ollama alternative several commenters said they'd switch to.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=48982681" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">GigaToken — roughly 1000x faster LLM tokenization</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>339 points · 65 comments</div>
+          <div style="padding-top:10px;">Heavily optimized tokenizer implementation. Thread largely admired the engineering craft, with practitioners debating where tokenizer speed is actually the bottleneck.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49010167" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Codex Resets — a tracker for OpenAI usage-limit resets</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>309 points · 200 comments</div>
+          <div style="padding-top:10px;">Side project scraping a known account's announcements to log when Codex and ChatGPT rate limits reset. A wry, genuinely useful practitioner hack.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=48963465" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ TOOLBOX ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Toolbox</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">Software putting AI to work in the background</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Wispr Flow</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Voice dictation · macOS/Windows/iOS/Android</div>
+          <div style="padding-top:10px;">Turns spoken speech into clean, formatted text in any app system-wide, auto-removing filler words and fixing grammar as you talk.</div>
+          <a class="more" href="https://wisprflow.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Reclaim.ai</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Calendar automation · Web</div>
+          <div style="padding-top:10px;">Automatically reshuffles your calendar to protect focus blocks, schedule tasks and habits, and add buffer time around existing meetings.</div>
+          <a class="more" href="https://www.reclaim.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Mesh</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Personal CRM · macOS/Windows/Web/iOS/Android</div>
+          <div style="padding-top:10px;">Auto-pulls contacts from email and meetings, tracks job changes and news about them, and reminds you when to reconnect.</div>
+          <a class="more" href="https://me.sh" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ ARCHIVE ============ -->
+  <tr><td class="pad" align="center" style="padding:40px;">
+    <a href="https://github.com/akilxasp/ai-digest/tree/main/digests" style="display:inline-block;border:1px solid #0a0a0a;border-radius:999px;padding:14px 34px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;">Open archive</a>
+  </td></tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr><td class="pad" style="background:#050505;padding:26px 40px;color:#8a8a8a;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">
+    AI DIGEST — AUTOMATED DAILY BRIEF &nbsp;·&nbsp; 23 JULY 2026
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
