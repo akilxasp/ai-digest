@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>OPEN WEIGHTS, DEEP POCKETS — AI Digest</title>
+<!--
+  EMAIL-SAFE BY CONSTRUCTION. This file is both the web page and the email body,
+  so it obeys email client rules:
+    - literal hex colors only, never CSS variables (Gmail strips them)
+    - tables for layout, never flex or grid (Gmail ignores both)
+    - styles inline on the element (Gmail drops much of <style>)
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
+  The <style> block below is progressive enhancement for browsers only.
+  Nothing in it may be load-bearing.
+-->
+<style>
+  body { margin: 0; }
+  a.more:hover { opacity: .6; }
+  @media (max-width: 620px) {
+    .pad { padding: 24px !important; }
+    .h1 { font-size: 34px !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#e8e8e8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#e8e8e8;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
+
+  <!-- ============ HERO ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-29-hero.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">City of Washington, D.C. from the National Observatory, 1876. Library of Congress, 1877. Public domain, Wikimedia Commons.</div>
+    <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// DAILY AI DIGEST — 29 JULY 2026</div>
+    <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">OPEN WEIGHTS, DEEP POCKETS</div>
+    <div style="color:#e8e8e8;">A reported $250 billion Nvidia backstop for OpenAI&#8217;s Ohio data center lands the same week Moonshot AI open-sources a 2.8-trillion-parameter model and 30-plus companies form an alliance to share cybersecurity defenses for free &#8212; capital keeps concentrating while the code built on top of it keeps getting given away. Grok 4.5 lands in GitHub Copilot and Midjourney sharpens its aesthetics, while builders on Hacker News favor the same instinct from the other direction: on-device confidence scoring, formally verified code, and dictation that never phones home.</div>
+    <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
+      Issue 8 &nbsp;·&nbsp; 6 sources &nbsp;·&nbsp; 6 MIN
+    </div>
+  </td></tr>
+
+  <!-- ============ SIGNALS ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#3f88c5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">NVIDIA IN TALKS TO BACKSTOP $250B FOR OPENAI&#8217;S OHIO DATA CENTER</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">SiliconANGLE &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Nvidia is reportedly negotiating to guarantee up to $250 billion in financing for OpenAI&#8217;s 10-gigawatt Ohio data center lease, a project that could top $500 billion once chips are included.</div>
+    <a class="more" href="https://siliconangle.com/2026/07/27/nvidia-reportedly-backstop-250b-loan-new-openai-data-center-campus/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#2e933c;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">MOONSHOT AI RELEASES KIMI K3 MODEL WEIGHTS FOR PUBLIC DOWNLOAD</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">TechNode &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Moonshot AI open-sourced the full weights and infrastructure stack for Kimi K3, a 2.8-trillion-parameter MoE model with native vision and a 1M-token context window.</div>
+    <a class="more" href="https://technode.com/2026/07/27/moonshot-ai-to-make-kimi-k3-available-for-public-download/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#5762d5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">GROK 4.5 IS NOW AVAILABLE IN GITHUB COPILOT</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">GitHub Changelog &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">xAI&#8217;s Grok 4.5 reasoning model rolled out to GitHub Copilot Pro, Pro+, Max, Business, and Enterprise plans with a 500K-token context window and configurable reasoning effort.</div>
+    <a class="more" href="https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#e94f37;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">NVIDIA AND 30+ TECH FIRMS LAUNCH OPEN SECURE AI ALLIANCE</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">SiliconANGLE &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Nvidia, Microsoft, IBM, Cisco, Hugging Face, Adobe and dozens more formed an alliance to jointly build and freely share open-source tools for defending against AI-powered cyberattacks.</div>
+    <a class="more" href="https://siliconangle.com/2026/07/27/tech-industry-leaders-join-form-open-secure-ai-alliance-promote-safety-security/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#d81e5b;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">PAPER RAISES $34M SERIES A TO BUILD AN AI-NATIVE DESIGN PLATFORM</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Paper &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Design-tool startup Paper raised a $34M Series A to build a code-native design platform for teams working with AI agents, and open-sourced its Paper Shaders library under Apache 2.0.</div>
+    <a class="more" href="https://paper.design/blog/series-a" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#f26419;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">MIDJOURNEY SHIPS V8.2, FOCUSED ON AESTHETICS AND PERSONALIZATION</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Midjourney &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Midjourney made V8.2 the default model, promising bolder image outputs and personalization that adapts more closely to each user&#8217;s visual taste.</div>
+    <a class="more" href="https://updates.midjourney.com/version-8-2/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+
+  <!-- ============ DEEP DIVE ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-29-feature.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Old Naval Observatory Lithograph. Unknown artist, undated. Public domain, Wikimedia Commons.</div>
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
+    <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">COMPUTE CONCENTRATES, CODE DISPERSES</div>
+    <div style="color:#e8e8e8;">This week&#8217;s biggest spend &#8212; Nvidia&#8217;s reported $250 billion backstop for OpenAI&#8217;s Ohio campus &#8212; and its biggest give-away &#8212; Moonshot&#8217;s fully open Kimi K3 weights &#8212; landed days apart. Capital keeps concentrating in a handful of hyperscale bets, while the code and defenses built on top of it, from Paper&#8217;s Apache-licensed shader library to the 30-company Secure AI Alliance, get pushed back into the open. The same pull shows up bottom-up: this week&#8217;s best-received Hacker News projects were on-device confidence routing and dictation that skips the cloud entirely, not anything requiring a subscription.</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">29 JULY 2026</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">If your coding agent supports adjustable reasoning effort, like Grok 4.5&#8217;s new setting inside GitHub Copilot, don&#8217;t leave it maxed out by default. Dial it down for boilerplate and mechanical edits, and save the higher tiers for the change that actually needs the extra thinking &#8212; the same trick this week&#8217;s Cactus Hybrid project uses under the hood to decide when a small on-device model is confident enough to skip the cloud.</div>
+  </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td style="padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-07-29-community.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="padding:14px 40px 0 40px;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;">&#8216;Religion Des Sikhes&#8217; woodcut engraving. B. L. Andrew, Le Magasin Pittoresque, circa 1836. Public domain, Wikimedia Commons.</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">CACTUS HYBRID: ON-DEVICE GEMMA 4 THAT KNOWS WHEN IT&#8217;S WRONG</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News (Show HN)<br>189 points &middot; 44 comments</div>
+          <div style="padding-top:10px;">A tiny probe layer reads hidden states to score answer confidence, routing only 15&ndash;35% of queries to a cloud model while matching larger-model accuracy.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49010782" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">PALMIER PRO: OPEN-SOURCE MACOS VIDEO EDITOR BUILT FOR AI AGENTS</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News (Show HN)<br>191 points &middot; 39 comments</div>
+          <div style="padding-top:10px;">Native Swift editor with built-in Seedance/Kling/Nano Banana generation and an MCP server so Claude, Codex, or Cursor can edit the timeline directly.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49022911" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">FORMALLY VERIFIED 3D CSG: TRUST 93 LINES OF SPEC, NOT 1,000 OF AI CODE</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News (Show HN)<br>105 points &middot; 45 comments</div>
+          <div style="padding-top:10px;">AI generated 60,000+ lines of Lean proofs for a mesh-intersection kernel; reviewers only need to check a 93-line spec since the proof checker verifies the rest.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49083239" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">YAP: OPEN-SOURCE, ON-DEVICE VOICE DICTATION FOR MACOS</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News (Show HN)<br>98 points &middot; 38 comments</div>
+          <div style="padding-top:10px;">A 4MB Swift menu-bar app using Apple&#8217;s on-device SpeechAnalyzer, zero network calls, built because Apple&#8217;s own dictation phones home.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49073834" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ TOOLBOX ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Toolbox</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">Software putting AI to work in the background</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Spinach AI</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Meeting notes &middot; Web</div>
+          <div style="padding-top:10px;">Joins standup and sprint calls, then auto-writes assigned Jira or Linear tickets from what was said before the call ends.</div>
+          <a class="more" href="https://www.spinach.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Bardeen</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Browser automation &middot; Chrome</div>
+          <div style="padding-top:10px;">Watches for a trigger, like a new LinkedIn connection, and auto-fills forms or scrapes data into your CRM or spreadsheet.</div>
+          <a class="more" href="https://www.bardeen.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Numerous.ai</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Spreadsheets &middot; Sheets/Excel</div>
+          <div style="padding-top:10px;">Type a plain-language request into a cell and it returns the formula, categorization, or cleaned data instantly.</div>
+          <a class="more" href="https://numerous.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ ARCHIVE ============ -->
+  <tr><td class="pad" align="center" style="padding:40px;">
+    <a href="https://github.com/akilxasp/ai-digest/tree/main/digests" style="display:inline-block;border:1px solid #0a0a0a;border-radius:999px;padding:14px 34px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;">Open archive</a>
+  </td></tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr><td class="pad" style="background:#050505;padding:26px 40px;color:#8a8a8a;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">
+    AI DIGEST &#8212; AUTOMATED DAILY BRIEF &nbsp;·&nbsp; 29 JULY 2026
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
