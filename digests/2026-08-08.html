@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>OWNING THE STACK — AI Digest</title>
+<!--
+  EMAIL-SAFE BY CONSTRUCTION. This file is both the web page and the email body,
+  so it obeys email client rules:
+    - literal hex colors only, never CSS variables (Gmail strips them)
+    - tables for layout, never flex or grid (Gmail ignores both)
+    - styles inline on the element (Gmail drops much of <style>)
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
+  The <style> block below is progressive enhancement for browsers only.
+  Nothing in it may be load-bearing.
+-->
+<style>
+  body { margin: 0; }
+  a.more:hover { opacity: .6; }
+  @media (max-width: 620px) {
+    .pad { padding: 24px !important; }
+    .h1 { font-size: 34px !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#e8e8e8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#e8e8e8;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
+
+  <!-- ============ HERO ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-08-hero.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Velk&yacute; pohled na Prahu (Praga) — Wenceslaus Hollar, 1649, public domain, Wikimedia Commons</div>
+    <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// DAILY AI DIGEST — 8 AUGUST 2026</div>
+    <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">OWNING THE STACK</div>
+    <div style="color:#e8e8e8;">Anthropic is building its own chips and handing Claude Code more autonomy in the same week Google retires its old Assistant for Gemini and OpenAI fights Apple in court over trade secrets. Enterprises are already building spend consoles to keep the resulting AI bills in check, while Figma quietly shipped the file-organization feature designers have wanted for years. Below: six stories from the last day, four community builds worth your time, and three small tools that already know how to help.</div>
+    <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
+      Issue 18 &nbsp;·&nbsp; 6 sources &nbsp;·&nbsp; 5 MIN
+    </div>
+  </td></tr>
+
+  <!-- ============ SIGNALS ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#3f88c5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Anthropic confirms in-house chip team to design custom silicon for Claude</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Forbes &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Anthropic is hiring engineers to co-design custom AI chips with its models, targeting roughly half the per-token inference cost while still leaning on AWS, Google, Nvidia, and AMD hardware.</div>
+    <a class="more" href="https://www.forbes.com/sites/jonmarkman/2026/08/06/anthropic-enters-the-ai-chip-race-with-in-house-chip-team/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#d81e5b;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">OpenAI asks judge to dismiss Apple's trade secrets lawsuit</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">iPhone in Canada &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">OpenAI filed a 31-page motion calling Apple's espionage claims 'rotten to its core,' arguing a former Apple engineer helped ex-colleagues find information rather than stealing hardware secrets.</div>
+    <a class="more" href="https://www.iphoneincanada.ca/2026/08/06/openai-tells-judge-apples-trade-secret-lawsuit-is-rotten-to-its-core/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#44bba4;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Claude Code's 'auto mode' becomes the default permission setting</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">9to5Mac &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Starting August 14, a classifier will auto-approve routine tool calls in Claude Code and only prompt users for irreversible or risky actions, replacing manual approval as the default for Pro, Max, and Team plans.</div>
+    <a class="more" href="https://9to5mac.com/2026/08/07/psa-claude-code-enabling-auto-mode-as-default-next-week-anthropic-says/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#f26419;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Google Assistant is being fully retired from Android for Gemini</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">9to5Google &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Google confirmed Assistant will be permanently shut off on phones, Wear OS, and Android Auto starting September 4, with no opt-out once a device migrates to Gemini.</div>
+    <a class="more" href="https://9to5google.com/2026/08/04/google-assistant-september-2026-shutdown/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#5762d5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Rippling launches an AI Spend Console to track enterprise AI ROI</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">TechCrunch &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">After burning millions on AI internally, Rippling productized its usage tracker into a console that shows CFOs spend by employee and team, ties it to outcomes, and governs which models are approved.</div>
+    <a class="more" href="https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#e94f37;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Figma rolls out nested folders for file organization</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Figma Blog &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Paid Figma plans can now nest folders up to 10 levels deep with inheritable permissions, a long-requested change that required rebuilding the underlying content and permissions model.</div>
+    <a class="more" href="https://www.figma.com/blog/code-craft-and-the-making-of-nested-folders/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+
+  <!-- ============ DEEP DIVE ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-08-feature.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Panorama of Manhattan's West Side from Across the Hudson — Tom Blackmore, 1945, public domain, Wikimedia Commons</div>
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
+    <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">CONTROL MOVES DOWN THE STACK</div>
+    <div style="color:#e8e8e8;">AI companies are no longer content to rent compute or ship features on top of someone else's platform — Anthropic's new chip team and Claude Code's push toward autonomous action both bet on owning more of the stack, from silicon to decision-making. That same instinct shows up bottom-up: this week's best-loved community builds weren't flashy demos but engineers squeezing huge models onto phones and laptop GPUs, chasing the same efficiency Anthropic wants from custom silicon. Enterprises, meanwhile, are building governance layers like Rippling's spend console because autonomy and efficiency both raise the same question: who actually knows what the AI is doing and costing.</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">8 AUGUST 2026</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">If you're switching to an agent harness with auto-approve permissions, like Claude Code's new auto mode, scope its access before you turn it on rather than after — a dedicated project directory or sandboxed profile, not your whole home folder. Autonomy is only as safe as the boundary you set before the first task runs.</div>
+  </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td style="padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-08-community.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="padding:14px 40px 0 40px;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;">1887 Lithograph of Bristol — Lazard, 1887, public domain, Wikimedia Commons</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Swiftlet: run an 80B Qwen model in 4.3GB of RAM on a Mac</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">HACKER NEWS<br>310 points &middot; 141 comments</div>
+          <div style="padding-top:10px;">A Swift+Metal runtime keeps only the dense core resident and streams MoE experts from disk, letting huge models run on ordinary Apple hardware.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49158333" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Maple-Preview: ternary 20B MoE running at 120 tok/s on an iPhone</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">HACKER NEWS<br>170 points &middot; 52 comments</div>
+          <div style="padding-top:10px;">DeepGrove's open 2-bit ternary-weight MoE hits 120+ tok/s on-device, praised as a real taste of local AI on low-end hardware.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49173984" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Soup: fine-tune an 8B model on a 4GB laptop GPU</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">HACKER NEWS<br>136 points &middot; 28 comments</div>
+          <div style="padding-top:10px;">A single-YAML LoRA CLI streams the frozen base model into VRAM one layer at a time, so an 8B model trains on a 4GB RTX 3050.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49166984" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Nightcrawler: a local AI pentesting agent that runs on a smartphone</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">HACKER NEWS<br>119 points &middot; 35 comments</div>
+          <div style="padding-top:10px;">Fully offline, open-source pentest agent pairs a small local model with a scope-enforcement proxy, working patiently like a human tester.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49154127" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ TOOLBOX ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Toolbox</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">Software putting AI to work in the background</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Otter.ai</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Meeting notes &middot; Web/iOS/Android</div>
+          <div style="padding-top:10px;">Transcribes calls live and generates searchable summaries with action items synced back to your calendar and CRM.</div>
+          <a class="more" href="https://otter.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Fathom</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Meeting notes &middot; Web/Zoom/Meet/Teams</div>
+          <div style="padding-top:10px;">Joins video calls, records and transcribes them, then writes a summary with action items straight into your CRM afterward.</div>
+          <a class="more" href="https://fathom.video" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">AudioPen</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Voice notes &middot; Web/iOS</div>
+          <div style="padding-top:10px;">Turns a rambling voice memo into a clean, organized paragraph of text with no manual editing required.</div>
+          <a class="more" href="https://audiopen.ai" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ ARCHIVE ============ -->
+  <tr><td class="pad" align="center" style="padding:40px;">
+    <a href="https://github.com/akilxasp/ai-digest/tree/main/digests" style="display:inline-block;border:1px solid #0a0a0a;border-radius:999px;padding:14px 34px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;">Open archive</a>
+  </td></tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr><td class="pad" style="background:#050505;padding:26px 40px;color:#8a8a8a;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">
+    AI DIGEST — AUTOMATED DAILY BRIEF &nbsp;·&nbsp; 8 AUGUST 2026
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
