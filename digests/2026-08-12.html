@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>BEYOND THE CHATBOT — AI Digest</title>
+<!--
+  EMAIL-SAFE BY CONSTRUCTION. This file is both the web page and the email body,
+  so it obeys email client rules:
+    - literal hex colors only, never CSS variables (Gmail strips them)
+    - tables for layout, never flex or grid (Gmail ignores both)
+    - styles inline on the element (Gmail drops much of <style>)
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
+  The <style> block below is progressive enhancement for browsers only.
+  Nothing in it may be load-bearing.
+-->
+<style>
+  body { margin: 0; }
+  a.more:hover { opacity: .6; }
+  @media (max-width: 620px) {
+    .pad { padding: 24px !important; }
+    .h1 { font-size: 34px !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#e8e8e8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#e8e8e8;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
+
+  <!-- ============ HERO ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-12-hero.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">&ldquo;The Fall of Reynolds,&rdquo; Alfred Rudolph Waud, 1863 &mdash; public domain, Wikimedia Commons</div>
+    <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// DAILY AI DIGEST — 12 AUGUST 2026</div>
+    <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">BEYOND THE CHATBOT</div>
+    <div style="color:#e8e8e8;">Anthropic is trading chat interfaces for poured concrete, co-building data centers with Macquarie and GIC while xAI ships an always-on agent with its own virtual computer. Design tools are wiring AI straight into the canvas instead of bolting on a chat window, and in the open-model world a 4B parameter model just matched GPT-5.6 Sol on retrieval at a fraction of the cost &mdash; proof the compute race and the efficiency race are running in parallel.</div>
+    <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
+      Issue 22 &nbsp;·&nbsp; 6 sources &nbsp;·&nbsp; 6 MIN
+    </div>
+  </td></tr>
+
+  <!-- ============ SIGNALS ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#e94f37;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Anthropic, Macquarie And GIC Launch Theseus Infrastructure</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Macquarie Group &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Anthropic partnered with Macquarie Asset Management and GIC to fund and build data centers it will lease as anchor tenant, backing its US compute expansion.</div>
+    <a class="more" href="https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#3f88c5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">OpenAI Ties GPT-5.6-Cyber Access To New Daybreak Red Tier</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Security Boulevard &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">OpenAI expanded its Daybreak cybersecurity program with Blue and Red access tiers and launched GPT-5.6-Cyber, a model for vetted defenders to do vulnerability research and exploit validation.</div>
+    <a class="more" href="https://securityboulevard.com/2026/08/openai-ties-gpt-5-6-cyber-access-to-new-daybreak-red-tier/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#f4c046;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Figma MCP Runs Weave Design Tools Inside Your AI Agent</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Figma &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Figma now lets users run its Weave design tools directly from AI agent clients like ChatGPT, Claude, or Cursor via an MCP server, keeping brand context without switching apps.</div>
+    <a class="more" href="https://www.figma.com/release-notes/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#44bba4;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Anthropic Pledges Watermarks On All Claude-Generated Output</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">The Register &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Anthropic will embed invisible, copy-paste-surviving watermarks and signed metadata into all new Claude-generated text and files worldwide, complying with the EU AI Act's transparency code.</div>
+    <a class="more" href="https://www.theregister.com/ai-and-ml/2026/08/11/anthropic-pledges-to-embed-watermarks-to-help-discern-ai-slop-in-sop-to-eu/5285792" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#c05299;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">xAI Launches Grok Bot As Always-On Agent With Its Own Computer</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Interesting Engineering &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">xAI opened a public beta of Grok Bot, an always-on agent that gets a dedicated cloud computer to log into apps and execute multi-step work autonomously.</div>
+    <a class="more" href="https://interestingengineering.com/ai-robotics/xai-grok-bot-computer-agent" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#2e933c;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Adobe Firefly Adds Run Interfaces For Batch Production Work</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Adobe &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Adobe Firefly introduced a beta letting enterprise users build node-free production interfaces for batch creative jobs of up to 500 assets at once.</div>
+    <a class="more" href="https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+
+  <!-- ============ DEEP DIVE ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-12-feature.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">&ldquo;Campagna Romana,&rdquo; Vittorio Avondo &mdash; public domain, Wikimedia Commons</div>
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
+    <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">AI Stops Asking, Starts Doing</div>
+    <div style="color:#e8e8e8;">The pattern across today's releases is agents getting their own infrastructure instead of waiting in a chat window: Anthropic is now a data-center tenant, xAI's Grok Bot gets a dedicated cloud computer, and Figma lets agents reach straight into the design canvas. The open-source side is proving the same capability doesn't require frontier-scale hardware &mdash; this week's HN retrieval benchmark had a 4B model matching a frontier model on cost and accuracy alike.</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">12 AUGUST 2026</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">Before defaulting to the biggest model for every task, test a smaller specialized one first &mdash; this week's HN benchmark showed a 4B model matching GPT-5.6 Sol on retrieval at a fraction of the cost. And if you route code through an AI coding assistant, spend ten minutes checking what it actually sends over the wire, the way one practitioner did with Copilot this week.</div>
+  </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td style="padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-12-community.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="padding:14px 40px 0 40px;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;">&ldquo;Zurlauben,&rdquo; Fritz Quant, c. 1920 &mdash; public domain, Wikimedia Commons</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">H3-Metal: Native MiniMax-H3 Inference For Apple Silicon</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>422 points · 93 comments</div>
+          <div style="padding-top:10px;">Redis creator Salvatore Sanfilippo wrote a from-scratch C/Metal engine to run MiniMax-H3 video generation natively on Apple Silicon, MIT-licensed and praised for its craftsmanship.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49252179" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Beating GPT-5.6 Sol On Retrieval With A 100x Cheaper Model</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>435 points · 125 comments</div>
+          <div style="padding-top:10px;">Neon and Castform RL-post-trained a 4B open model that matched GPT-5.6 Sol on agentic retrieval at roughly 95x lower rollout cost, sparking a model-routing discussion.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49186762" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">GPU Passthrough: Faster llama.cpp Inference In macOS VMs</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>280 points · 43 comments</div>
+          <div style="padding-top:10px;">Cua built a Metal-capability shim letting macOS VMs hit faster GPU paths, delivering 7-16x speedups for llama.cpp — useful for anyone running local models inside VMs.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49259339" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">What I Learned Putting GitHub Copilot Behind A MITM Proxy</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>154 points · 24 comments</div>
+          <div style="padding-top:10px;">A practitioner intercepted Copilot's traffic and documented its real context-injection and model-routing behavior, including unencrypted local prompt logs — a hard-won lesson.</div>
+          <a class="more" href="https://news.ycombinator.com/item?id=49256057" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ TOOLBOX ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Toolbox</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">Software putting AI to work in the background</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Krisp</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Meeting Notes &middot; Desktop/Mobile</div>
+          <div style="padding-top:10px;">Strips background noise from live calls in real time and auto-generates transcripts, summaries, and action items after each meeting.</div>
+          <a class="more" href="https://krisp.ai/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Fyxer AI</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Email Triage &middot; Gmail/Outlook</div>
+          <div style="padding-top:10px;">Reads incoming Gmail or Outlook messages, sorts them by priority, and drafts replies in the user's tone for review before sending.</div>
+          <a class="more" href="https://www.fyxer.com/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Bardeen</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Browser Automation &middot; Chrome</div>
+          <div style="padding-top:10px;">Runs saved browser scripts that scrape web page data and auto-fill it into spreadsheets or CRMs without manual copy-pasting.</div>
+          <a class="more" href="https://www.bardeen.ai/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ ARCHIVE ============ -->
+  <tr><td class="pad" align="center" style="padding:40px;">
+    <a href="https://github.com/akilxasp/ai-digest/tree/main/digests" style="display:inline-block;border:1px solid #0a0a0a;border-radius:999px;padding:14px 34px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;">Open archive</a>
+  </td></tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr><td class="pad" style="background:#050505;padding:26px 40px;color:#8a8a8a;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">
+    AI DIGEST &mdash; AUTOMATED DAILY BRIEF &nbsp;·&nbsp; 12 AUGUST 2026
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
