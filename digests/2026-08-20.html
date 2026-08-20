@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>THE TRUST LAYER — AI Digest</title>
+<!--
+  EMAIL-SAFE BY CONSTRUCTION. This file is both the web page and the email body,
+  so it obeys email client rules:
+    - literal hex colors only, never CSS variables (Gmail strips them)
+    - tables for layout, never flex or grid (Gmail ignores both)
+    - styles inline on the element (Gmail drops much of <style>)
+    - no anchor-link nav, no position, no background-image, no filter
+  Images must be monochrome AT SOURCE — CSS grayscale filters do not survive.
+  The <style> block below is progressive enhancement for browsers only.
+  Nothing in it may be load-bearing.
+-->
+<style>
+  body { margin: 0; }
+  a.more:hover { opacity: .6; }
+  @media (max-width: 620px) {
+    .pad { padding: 24px !important; }
+    .h1 { font-size: 34px !important; }
+    /* browsers stack multi-column rows; email clients keep the columns.
+       Stacked cells drop the vertical rule and take a horizontal one instead. */
+    .col { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;
+           border-right: 0 !important; border-bottom: 1px solid #d4d4d4; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#e8e8e8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#e8e8e8;">
+<tr><td align="center" style="padding:0;">
+
+<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:700px;background:#ffffff;font-family:'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;line-height:1.6;color:#0a0a0a;">
+
+  <!-- ============ HERO ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-20-hero.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">Panorama of Beirut, Félix Bonfils, c. 1867–1899, public domain, Wikimedia Commons</div>
+    <div style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#e8e8e8;font-weight:700;">AI Digest</div>
+    <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8a8a8a;padding-top:22px;">// DAILY AI DIGEST — 20 AUGUST 2026</div>
+    <div class="h1" style="font-size:46px;line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;font-weight:300;color:#ffffff;padding:18px 0 22px 0;">THE TRUST LAYER</div>
+    <div style="color:#e8e8e8;">OpenAI previewed a way to police multi-session abuse without reading anyone's prompts, D&amp;AD's 2026 report caught the ad industry hollowing out the junior roles that teach creative judgment, and Figma opened its agent's skills to the community &mdash; three different answers to the same question: who checks the AI's work? Elsewhere, Z.ai shipped GLM-5.3 for agentic coding, Meta brought its assistant to the Mac, and Pika undercut the market on AI audio.</div>
+    <div style="color:#8a8a8a;font-size:11px;letter-spacing:0.06em;padding-top:30px;">
+      Issue 30 &nbsp;·&nbsp; 13 sources &nbsp;·&nbsp; 6 MIN
+    </div>
+  </td></tr>
+
+  <!-- ============ SIGNALS ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Signals</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#f4c046;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Meta Ships a Native Mac App for Meta AI</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">9to5Mac &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Meta launched a dedicated Mac app that can read any open window and take system-wide dictation, aimed at creators and small businesses running Facebook and Instagram ads.</div>
+    <a class="more" href="https://9to5mac.com/2026/08/19/meta-ai-is-now-available-as-a-more-capable-desktop-app-for-mac/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#3f88c5;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">OpenAI Previews Private Safety Processing</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">TechCrunch &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">OpenAI is testing a system that screens conversations across multiple sessions for abuse patterns, like slow-drip cyberattack planning, without exposing prompts to human reviewers.</div>
+    <a class="more" href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#44bba4;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">D&amp;AD's 2026 Report Warns Agencies Are Cutting the Jobs That Build Judgment</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">D&amp;AD &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">D&amp;AD's AI and Creativity report finds AI use in award entries has more than doubled to 27.6%, but warns that cutting junior creative roles removes the training ground for the judgment AI can't replace.</div>
+    <a class="more" href="https://www.dandad.org/insights/learning/ai-report-2026" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#e94f37;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Z.ai Ships GLM-5.3 for Agentic Coding and Defense</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Z.ai &nbsp;·&nbsp; AI</div>
+    <div style="padding-top:10px;">Z.ai released GLM-5.3, a 743B-parameter model tuned for coding, defensive cybersecurity, and long-horizon agent tasks, with open weights following in about two weeks.</div>
+    <a class="more" href="https://docs.z.ai/guides/llm/glm-5.3" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#8e6c8a;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Figma Opens an AI Skills Library to the Community</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Figma &nbsp;·&nbsp; DESIGN</div>
+    <div style="padding-top:10px;">Figma launched a library of 50+ community-published skills the Figma agent can run, and let anyone turn a file's own context into a reusable, shareable workflow.</div>
+    <a class="more" href="https://www.figma.com/blog/got-skills-make-the-figma-agent-a-better-collaborator/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px;border-bottom:1px solid #d4d4d4;">
+    <div style="width:12px;height:12px;background:#d81e5b;font-size:0;line-height:0;margin-bottom:16px;">&nbsp;</div>
+    <div style="font-size:16px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Pika Undercuts the Market With Four Audio Models</div>
+    <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:12px 0 2px 0;">Pika &nbsp;·&nbsp; AI TOOLS</div>
+    <div style="padding-top:10px;">Pika launched Music, SFX, Speech, and Soundtrack, four foundation audio models priced up to 20x cheaper than rivals, letting video and game workflows generate synced sound directly.</div>
+    <a class="more" href="https://experiment.pika.art/blog/pika-audio-models" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Read source</a>
+  </td></tr>
+
+  <!-- ============ DEEP DIVE ============ -->
+  <tr><td style="background:#050505;padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-20-feature.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="background:#050505;padding:34px 40px 40px 40px;color:#e8e8e8;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding-bottom:26px;">‘Religion Des Sikhes’ woodcut engraving, B. L. Andrew for Le Magasin Pittoresque, 1836, public domain, Wikimedia Commons</div>
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8a8a;padding-bottom:20px;">Deep Dive</div>
+    <div style="font-size:26px;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;color:#ffffff;padding-bottom:16px;">VERIFICATION IS THE NEW MOAT</div>
+    <div style="color:#e8e8e8;">OpenAI's private, cross-session abuse screening, Z.ai's staged release of open weights, and D&amp;AD's warning about vanishing junior creative roles all point the same direction: as models get more capable and more autonomous, trust is what buyers are shopping for, not raw capability. Figma's move to let anyone package and share an agent skill is the design-tool answer to the same problem &mdash; making AI behavior inspectable and repeatable instead of a black box.</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;padding-top:24px;">20 AUGUST 2026</div>
+  </td></tr>
+
+  <!-- ============ DAILY TIP ============ -->
+  <tr><td class="pad" style="background:#f4c046;padding:32px 40px;color:#0a0a0a;">
+    <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;font-weight:700;padding-bottom:12px;">Daily Tip</div>
+    <div style="color:#0a0a0a;">Before trusting a model's output on something that matters, run the same task past a second model or a held-out example, the way Netlify tested one prompt across 11 models this week. Cheap models often nail simple tasks and expensive ones don't always win; the only way to know is to check the specific task in front of you, not the leaderboard.</div>
+  </td></tr>
+
+  <!-- ============ FROM THE COMMUNITY ============ -->
+  <tr><td style="padding:0;">
+    <img src="https://raw.githubusercontent.com/akilxasp/ai-digest/main/assets/2026-08-20-community.jpg" alt="" width="700" style="width:100%;max-width:700px;display:block;border:0;">
+  </td></tr>
+  <tr><td class="pad" style="padding:14px 40px 0 40px;">
+    <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a8a;">Panorama composite, LARO 2372–2374, NPS photo, 1957, public domain, Wikimedia Commons</div>
+  </td></tr>
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">From the Community</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">What people are building and how they are working</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">AI By Hand</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>366 points · 31 comments</div>
+          <div style="padding-top:10px;">A professor's newsletter that teaches AI, math, and computer architecture by working the calculations out on paper instead of in code.</div>
+          <a class="more" href="https://www.byhand.ai/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">Air Theremin</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>244 points · 83 comments</div>
+          <div style="padding-top:10px;">A browser theremin played by waving at your webcam, turning hand or phone-tilt tracking directly into pitch and volume.</div>
+          <a class="more" href="https://theremin.bizibah.com/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 22px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">One Prompt, 11 Models</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>220 points · 95 comments</div>
+          <div style="padding-top:10px;">Netlify ran the same coding task through 11 models on OpenRouter and compared output quality against credit cost, a template for picking a model on purpose.</div>
+          <a class="more" href="https://www.netlify.com/blog/one-prompt-11-models-very-different-results/" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+        <td class="col" width="50%" valign="top" style="width:50%;padding:26px 0 26px 22px;">
+          <div style="font-size:14px;line-height:1.35;text-transform:uppercase;letter-spacing:0.04em;font-weight:400;color:#0a0a0a;">AI At Home Part 1: A Box of Scraps</div>
+          <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6a6a6a;padding:10px 0 2px 0;">Hacker News<br>130 points · 62 comments</div>
+          <div style="padding-top:10px;">Built a local inference box from four salvaged AMD V620 GPUs pulled out of a failed cloud-gaming venture, cooling problems and all.</div>
+          <a class="more" href="https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html" style="display:inline-block;margin-top:14px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">View thread</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ TOOLBOX ============ -->
+  <tr><td class="pad" style="padding:26px 40px 22px 40px;border-bottom:1px solid #d4d4d4;background:#f4f4f4;">
+    <div style="font-size:13px;letter-spacing:0.30em;text-transform:uppercase;color:#0a0a0a;font-weight:700;">Toolbox</div>
+    <div style="font-size:10px;letter-spacing:0.10em;color:#6a6a6a;padding-top:8px;">Software putting AI to work in the background</div>
+  </td></tr>
+
+  <tr><td class="pad" style="padding:0 40px;border-bottom:1px solid #d4d4d4;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px 26px 0;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Cotypist</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Autocomplete · macOS</div>
+          <div style="padding-top:10px;">Predicts your next words system-wide as you type and inserts them on Tab, matching your own writing style, entirely on-device.</div>
+          <a class="more" href="https://cotypist.app/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 18px;border-right:1px solid #d4d4d4;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Descript</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Video editing · Web + desktop</div>
+          <div style="padding-top:10px;">Transcribes a recording automatically so you edit the video by deleting or reordering words in the text, not scrubbing a timeline.</div>
+          <a class="more" href="https://www.descript.com/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+        <td class="col" width="33%" valign="top" style="width:33%;padding:26px 0 26px 18px;">
+          <div style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;color:#0a0a0a;">Photoroom</div>
+          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;padding:8px 0 0 0;">Product photos · Web/iOS/Android</div>
+          <div style="padding-top:10px;">Strips backgrounds and generates studio-quality product shots from a phone photo, then batch-applies the edit across a whole catalog.</div>
+          <a class="more" href="https://www.photoroom.com/" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #0a0a0a;padding-bottom:3px;">Visit</a>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ============ ARCHIVE ============ -->
+  <tr><td class="pad" align="center" style="padding:40px;">
+    <a href="https://github.com/akilxasp/ai-digest/tree/main/digests" style="display:inline-block;border:1px solid #0a0a0a;border-radius:999px;padding:14px 34px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;">Open archive</a>
+  </td></tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr><td class="pad" style="background:#050505;padding:26px 40px;color:#8a8a8a;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">
+    AI DIGEST — AUTOMATED DAILY BRIEF &nbsp;·&nbsp; 20 AUGUST 2026
+  </td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</body>
+</html>
